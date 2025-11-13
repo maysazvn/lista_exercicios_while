@@ -18,11 +18,13 @@
     let estadoCivil = prompt(`Insira o seu estado civil:`);*/
 
     //PROCESSAMENTO
-    let nomeTamanho = Array.from(nome);
 
-    while(nomeTamanho < 3){
+    do {
         nome = prompt(`Insira o seu nome:`);
-    }
+         let nomeTamanho = Array.from(nome);
+    } while (nomeTamanho.length <= 3);
+
+    alert(`Nome válido: ${nome}.`);
 
 
     //SAÍDA
