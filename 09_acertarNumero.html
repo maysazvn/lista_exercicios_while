@@ -5,11 +5,29 @@
     */
 
     //ENTRADA
+    let sorteio = Math.floor(Math.random() * (31 - 1 + 1)) + 1;
+    let numero = 0;
 
 
     //PROCESSAMENTO
 
+    alert(`${sorteio}`);
+
+    let adivinhar = prompt(`Adivinhe o número de 1 a 30`);
+    while(adivinhar !== sorteio){
+
+        let adivinhar = prompt(`Adivinhe o número de 1 a 30`);
+
+        if(adivinhar < sorteio){
+            alert(`Menor!`);
+        } else{
+            alert(`Maior!`);
+        }
+    }
+
 
     //SAÍDA
+
+    alert(`Número correto!`);
     
 </script>

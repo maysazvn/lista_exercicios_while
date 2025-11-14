@@ -12,19 +12,42 @@
 
     //ENTRADA
     let nome = "";
-    /*let idade = Number(prompt(`Insira a sua idade:`));
-    let salario = Number(prompt(`Insira o seu salário:`));
-    let sexo = prompt(`Insira o seu sexo:`);
-    let estadoCivil = prompt(`Insira o seu estado civil:`);*/
+    let idade = 0;
+    let salario = 0;
+    let sexo = "";
+    let estadoCivil = "";
 
     //PROCESSAMENTO
 
     do {
         nome = prompt(`Insira o seu nome:`);
-         let nomeTamanho = Array.from(nome);
-    } while (nomeTamanho.length <= 3);
+    } while (nome.length <= 3);
 
     alert(`Nome válido: ${nome}.`);
+
+    do {
+        idade = Number(prompt(`Insira a sua idade:`));
+    } while (idade <= 0 || idade >= 150);
+
+    alert(`Idade válida: ${idade}.`);
+
+    do {
+        salario = Number(prompt(`Insira o seu salário:`));
+    } while (salario <= 0);
+
+    alert(`Salário válido: R$${salario}.`);
+
+    do {
+        sexo = prompt(`Insira o seu sexo:`).toUpperCase();
+    } while (sexo !== "F" && sexo !== "M");
+
+    alert(`Sexo válido: ${sexo}.`);
+
+    do {
+        estadoCivil = prompt(`Insira o seu estado civil:`).toUpperCase();
+    } while (estadoCivil !== "S" && estadoCivil !== "C" && estadoCivil !== "V" && estadoCivil !== "D");
+
+    alert(`Estado civil válido: ${estadoCivil}.`);
 
 
     //SAÍDA

@@ -7,10 +7,19 @@
 
     //ENTRADA
 
+    let senhaCorreta = "";
+
+    senhaCorreta = prompt(`Crie a senha de 4 dígitos:`);
+
+    while (senhaCorreta.length !== 4 || Number.isInteger(senhaCorreta)) {
+        alert(`Senha incorreta.`);
+
+        senhaCorreta = prompt(`Crie a senha de 4 dígitos:`);
+    } 
 
     //PROCESSAMENTO
 
-
     //SAÍDA
+    alert(`Senha correta.`);
 
 </script>

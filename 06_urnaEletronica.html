@@ -21,10 +21,44 @@
 
     //ENTRADA
 
+    let voto = Number(prompt(`As opções são:
+    1. Candidato Joãozinho
+    2. Candidato Mariazinha
+    3. Nulo
+    4. Branco
+    Entre com o seu voto:`));
+
+    let joaozinho = 0;
+    let mariazinha = 0;
+    let nulo = 0;
+    let branco = 0;
+
 
     //PROCESSAMENTO
 
+    do {
+
+        if (voto == 1) {
+            joaozinho++
+        } else if (voto == 2) {
+            mariazinha++
+        } else if (voto == 3) {
+            nulo++
+        } else {
+            branco++
+        }
+
+
+    } while (voto !== 0)
+
+   
+
 
     //SAÍDA
+
+    alert(`Joãozinho teve ${joaozinho} votos, Mariazinha teve ${mariazinha} votos. <br>
+    Houveram ${nulo} votos nulos. <br>
+    Houveram ${branco} votos brancos. <br>
+    O candidato vencedor foi`);
 
 </script>
