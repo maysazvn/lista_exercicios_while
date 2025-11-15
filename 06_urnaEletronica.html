@@ -32,33 +32,54 @@
     let mariazinha = 0;
     let nulo = 0;
     let branco = 0;
+    let totalVotos = 0;
 
 
     //PROCESSAMENTO
 
+    let porcNulo = (nulo / totalVotos) * 100;
+    let porcBranco = (branco / totalVotos) * 100;
+
+    let vencedor = "";
+    if (joaozinho > mariazinha) {
+        vencedor = "Joãozinho";
+    } else if (mariazinha > joaozinho) {
+        vencedor = "Mariazinha";
+    } else {
+        vencedor = "Empate";
+    }
+
     do {
 
-        if (voto == 1) {
-            joaozinho++
-        } else if (voto == 2) {
-            mariazinha++
-        } else if (voto == 3) {
-            nulo++
-        } else {
-            branco++
+        if (voto == 0) {
+            alert(`Joãozinho teve ${joaozinho} votos, Mariazinha teve ${mariazinha} votos. 
+    ${porcNulo}% dos votos foram nulos. 
+    ${porcBranco}% dos votos foram brancos. 
+    O candidato vencedor foi ${vencedor}`);
         }
+
+        if (voto == 1) {
+            joaozinho++;
+        }
+        else if (voto == 2) {
+            mariazinha++;
+        }
+        else if (voto == 3) {
+            nulo++;
+        }
+        else if (voto == 4) {
+            branco++;
+        }
+        else {
+            alert("Voto inválido! Tente novamente.");
+        }
+
+        totalVotos++
 
 
     } while (voto !== 0)
 
-   
-
 
     //SAÍDA
-
-    alert(`Joãozinho teve ${joaozinho} votos, Mariazinha teve ${mariazinha} votos. <br>
-    Houveram ${nulo} votos nulos. <br>
-    Houveram ${branco} votos brancos. <br>
-    O candidato vencedor foi`);
 
 </script>

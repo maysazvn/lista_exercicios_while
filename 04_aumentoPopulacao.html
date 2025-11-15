@@ -8,16 +8,20 @@
     //ENTRADA
     let populacaoA = 80000;
     let populacaoB = 200000;
-    let taxaCrescimentoA = (populacaoA * 0, 3) + populacaoA;
-    let taxaCrescimentoB = (populacaoB * 0, 3) + populacaoA;
+
+    let anos = 0;
 
 
     //PROCESSAMENTO
-    while (populacaoA < populacaoB) {
-        
+    while (populacaoA <= populacaoB) {
+        populacaoA = (populacaoA * 0.03) + populacaoA;
+        populacaoB = (populacaoB * 0.015) + populacaoB;
+
+        anos++
     }
 
-    alert(`A ${populacaoA} atingiu ${taxaCrescimentoA} habitantes, maior do que ${taxaCrescimentoB}`);
+    alert(`Serão necessários ${anos} anos para que o país A (${Math.round(populacaoA)} pessoas) ultrapasse ou iguale o país B. (${Math.round(populacaoB)} pessoas)`);
+
 
 
     //SAÍDA

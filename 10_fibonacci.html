@@ -5,11 +5,28 @@
     */
 
     //ENTRADA
+    let usuarioNumeros = Number(prompt(`Quantos números da sequência de fibonacci você deseja obter?`));
+
+    let a = 0;
+    let b = 1;
+
+    let contador = 0;
+    let fibonacci = [];
 
 
     //PROCESSAMENTO
 
+    while (contador < usuarioNumeros) {
+        fibonacci.push(a);
+        let proximo = a + b;
+        a = b;
+        b = proximo;
+        contador++;
+    }
+
 
     //SAÍDA
-    
-</script>
+
+    alert(`A sequência de fibonacci que você obteve é ${fibonacci.join(", ")}`);
+
+</script> 
