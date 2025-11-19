@@ -8,11 +8,21 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt(`Insira um número longo`));
+    let invertido = "";
 
     //PROCESSAMENTO
+    posicao = numero.length - 1;
+
+    while(posicao >= 0){
+        let caractere = numero[posicao];
+        invertido = invertido + caractere;
+        posicao--
+    }
 
 
     //SAÍDA
+
+    alert(`A ordem do número ${numero} ao contrário é ${invertido}`);
 
 </script>
